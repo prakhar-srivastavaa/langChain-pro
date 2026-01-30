@@ -37,6 +37,7 @@ print(documents[index1])
 print("Similarity Scores for Query1:", score1)
 
 
+
 # -------------------OUTPUT-----------------------
 # Query: who is the best batsman in the world?
 # virat kohli is the best batsman in the world
