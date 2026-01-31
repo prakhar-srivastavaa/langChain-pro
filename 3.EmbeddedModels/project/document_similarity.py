@@ -36,3 +36,12 @@ print("Query1:", query1)
 print(documents[index1])
 print("Similarity Scores for Query1:", score1)
 
+
+# -------------------OUTPUT-----------------------
+# Query: who is the best batsman in the world?
+# virat kohli is the best batsman in the world
+# Similarity Scores: 0.7281262877917158
+# ------------------------------------------------        
+# Query1: tell me about berlin
+# the capital of germany is berlin
+# Similarity Scores for Query1: 0.7096545666601005
