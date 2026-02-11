@@ -2,7 +2,7 @@ from langchain_huggingface import ChatHuggingFace, HuggingFacePipeline
 import streamlit as st
 import os
 import torch
-from langchain_core.prompts import PromptTemplate, load_prompt
+from langchain_core.prompts import load_prompt
 
 # Set huggingface cache home
 os.environ["HF_HOME"] = "Z:/huggingface_cache"
