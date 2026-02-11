@@ -1,0 +1,17 @@
+{
+    "name": null,
+    "input_variables": [
+        "length_input",
+        "paper_input",
+        "style_input"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "\nSummarize the research paper \"{paper_input}\" according to the following requirements:\n- **Style**: {style_input}\n- **Length**: {length_input}\n\nGuidelines:\n1. If the style is technical or mathematical, include relevant equations or technical terminology.\n2. If the style is beginner-friendly, use analogies and avoid heavy jargon.\n3. If the style is code-oriented, focus on the algorithm and provide pseudocode.\n4. If information is not available in the paper, respond with \"Insufficient information to answer the question\".\n\nSummary:\n",
+    "template_format": "f-string",
+    "validate_template": true,
+    "_type": "prompt"
+}
