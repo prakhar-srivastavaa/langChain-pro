@@ -7,6 +7,7 @@ os.environ["HF_HOME"] = "Z:/huggingface_cache"
 model_name = "LGAI-EXAONE/EXAONE-4.0-1.2B"
 
 print("Loading model and tokenizer...")
+
 # Load the model and tokenizer
 model = ChatHuggingFace.from_model_id(
     model_id=model_name,
