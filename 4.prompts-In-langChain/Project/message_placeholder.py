@@ -17,3 +17,4 @@ print(chat_history)
 
 #create prompt
 final_prompt= chat_template.invoke({'chat_history':chat_history, 'query':"where is my refund"})
+print(final_prompt)
