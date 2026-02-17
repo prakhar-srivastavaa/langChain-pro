@@ -26,6 +26,7 @@ parser = StrOutputParser()
 chain = prompt | model | parser
 
 response = chain.invoke({"topic": "langchain"})
+
 print(response)
 
 chain.get_graph().print_ascii()
