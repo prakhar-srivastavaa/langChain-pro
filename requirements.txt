@@ -27,3 +27,6 @@ scikit-learn
 
 # for streamlit ui
 streamlit
+
+#pydantic
+pydantic
