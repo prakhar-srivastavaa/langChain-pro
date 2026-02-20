@@ -13,3 +13,10 @@ number= Student(**new_number)
 
 print(number)
 print(student)
+
+#convert to dict or json as its in pydantic
+student_dict=dict(student)
+studetn_json= student.model_dump_json
+print(student_dict)
+
+print(studetn_json)
