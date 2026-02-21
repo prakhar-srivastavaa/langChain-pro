@@ -8,17 +8,17 @@ load_dotenv()
 
 api_key = os.getenv("OPENROUTER_API_KEY")
 
-prompt= PromptTemplate(
-    template="Generate 5 interesting facts about {topic}",
-    input_variables=["topic"]
-)
-
 model = ChatOpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key=api_key,
     model="arcee-ai/trinity-large-preview:free",
     temperature=0.5,
     max_tokens=200,
+)
+
+prompt= PromptTemplate(
+    template="Generate 5 interesting facts about {topic}",
+    input_variables=["topic"]
 )
 
 parser = StrOutputParser()
