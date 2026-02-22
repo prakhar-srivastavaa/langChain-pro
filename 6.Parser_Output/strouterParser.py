@@ -1,12 +1,15 @@
-from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
+from langchain_huggingface import ChatHuggingFace, HuggingFacePipeline
 from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 
 load_dotenv()
 
-llm= HuggingFaceEndpoint(
-    repo_id="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
-    task= "text-generation",
+llm = HuggingFacePipeline.from_model_id(
+    model_id="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    task="text-generation",
+    pipeline_kwargs=dict(
+        temperature=0.5
+    )
 )
 model= ChatHuggingFace(llm=llm)
 
@@ -26,5 +29,6 @@ prompt1= template1.invoke({"topic":"The impact of climate change on global agric
 result= model.invoke(prompt1)
 prompt2= template2.invoke({"text":result.content})
 summary= model.invoke(prompt2) 
-
+print(result.content)
+print("------------------------------------------------------------------------")
 print(summary.content)
