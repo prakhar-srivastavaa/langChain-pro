@@ -24,11 +24,13 @@ template= PromptTemplate(
     partial_variables={"format_instruction":parser.get_format_instructions()}
 )
 
-prompt = template.format()
+# prompt = template.format()
+# result = model.invoke(prompt)
+# final_json_result = parser.parse(result.content)
+# print(final_json_result)
+# print(type(final_json_result))
 
-print(prompt)
-
-result = model.invoke(prompt)
-final_json_result = parser.parse(result.content)
-print(final_json_result)
-print(type(final_json_result))
+# using chaain#########
+chain= template | model | parser
+final_result= chain.invoke({})
+print(final_result)
