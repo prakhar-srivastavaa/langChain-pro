@@ -12,7 +12,7 @@ api_key = os.getenv("OPENROUTER_API_KEY")
 model = ChatOpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key=api_key,
-    model="mistralai/mistral-7b-instruct",
+    model="arcee-ai/trinity-large-preview:free",
     temperature=0.5,
     max_tokens=512,
 )
