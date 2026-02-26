@@ -9,7 +9,7 @@ import pathlib
 
 # Script ke same folder mein cricket.txt dhundho — chahe kahi se bhi run karo
 BASE_DIR = pathlib.Path(__file__).parent
-CRICKET_FILE = str(BASE_DIR / "cricket.txt")
+CRICKET_FILE = str(BASE_DIR /docs/ "cricket.txt")
 
 load_dotenv()
 
