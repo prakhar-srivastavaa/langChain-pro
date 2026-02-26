@@ -33,3 +33,6 @@ pydantic
 
 #to print ascii
 grandalf
+
+#pypdf
+pypdf
