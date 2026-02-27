@@ -36,3 +36,6 @@ grandalf
 
 #pypdf
 pypdf
+
+# langchain_experimental
+langchain_experimental
