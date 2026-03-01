@@ -6,10 +6,16 @@ import os
 load_dotenv()
 
 # Configure embeddings to use OpenRouter
-embeddings = OpenAIEmbeddings(
-    model="arcee-ai/trinity-large-preview:free",
+# embeddings = OpenAIEmbeddings(
+#     model="arcee-ai/trinity-large-preview:free",
 
-    # model="openai/text-embedding-3-small",  # this is chargable pricing is low 
+#     # model="openai/text-embedding-3-small",  # this is chargable pricing is low 
+#     openai_api_key=os.getenv("OPENROUTER_API_KEY"),
+#     openai_api_base="https://openrouter.ai/api/v1"
+# )
+
+embeddings = OpenAIEmbeddings(
+     model="openai/text-embedding-3-small",
     openai_api_key=os.getenv("OPENROUTER_API_KEY"),
     openai_api_base="https://openrouter.ai/api/v1"
 )
